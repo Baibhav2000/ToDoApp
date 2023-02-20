@@ -19,6 +19,8 @@ mongoose.set('strictQuery', true);
 mongoose.connect(URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-});
+})
+.then(res => console.log(`Connected to Database`))
+.catch(err => console.log(`Failed to Connect`))
 
 app.listen(PORT,()=> console.log(`Listening to http://localhost:${PORT}`));
