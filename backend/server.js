@@ -15,7 +15,7 @@ app.use(cors({
 }));
 app.use('/', todoController);
 
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 
 mongoose.set('strictQuery', true);
 mongoose.connect(URI, {
